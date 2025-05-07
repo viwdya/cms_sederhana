@@ -12,17 +12,17 @@
 
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
-    <!-- Messages Dropdown Menu -->
+    <!-- User Dropdown Menu -->
     <li class="nav-item dropdown">
-      <a class="nav-link" data-toggle="dropdown" href="#">
+      <a class="nav-link" data-toggle="dropdown" href="#" role="button">
         <i class="far fa-user"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-right">
-        <a href="#" class="dropdown-item">
+        <a href="profile.php" class="dropdown-item">
           <i class="fas fa-user-cog mr-2"></i> Profile Settings
         </a>
         <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
+        <a href="logout.php" class="dropdown-item">
           <i class="fas fa-sign-out-alt mr-2"></i> Logout
         </a>
       </div>

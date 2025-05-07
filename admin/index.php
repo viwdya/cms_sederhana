@@ -71,12 +71,9 @@ include '../config/db.php';
                       echo "<tr>
                               <td>" . htmlspecialchars($row['title']) . "</td>
                               <td>
-                                <a href='edit_post.php?id={$row['id']}' class='btn btn-sm btn-warning'>
-                                  <i class='fas fa-edit'></i>
-                                </a>
-                                <a href='delete_post.php?id={$row['id']}' class='btn btn-sm btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>
-                                  <i class='fas fa-trash'></i>
-                                </a>
+                                <a href='view_post.php?id={$row['id']}' class='btn btn-sm btn-info' title='Lihat'><i class='fas fa-eye'></i></a>
+                                <a href='edit_post.php?id={$row['id']}' class='btn btn-sm btn-warning' title='Edit'><i class='fas fa-edit'></i></a>
+                                <a href='delete_post.php?id={$row['id']}' class='btn btn-sm btn-danger' title='Hapus' onclick='return confirm(\"Yakin ingin menghapus?\")'><i class='fas fa-trash'></i></a>
                               </td>
                             </tr>";
                   }
