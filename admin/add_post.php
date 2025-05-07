@@ -29,7 +29,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Pastikan tidak ada override font-size sidebar */
+    /* Hanya elemen utama/fokus yang ungu */
+    .btn-primary,
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-primary:hover,
+    .nav-pills .nav-link.active,
+    .bg-primary,
+    .card-primary.card-outline,
+    .alert-primary,
+    .border-primary {
+        background-color: #8000ff !important;
+        border-color: #8000ff !important;
+    }
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        color: #8000ff;
+    }
     .main-sidebar, .nav-sidebar .nav-link, .sidebar .user-panel, .sidebar .nav-header {
       font-size: 1rem !important;
     }

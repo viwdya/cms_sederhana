@@ -19,6 +19,27 @@ include '../config/db.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2.0/dist/css/adminlte.min.css">
+  <style>
+    /* Hanya elemen utama/fokus yang ungu */
+    .btn-primary,
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-primary:hover,
+    .nav-pills .nav-link.active,
+    .bg-primary,
+    .card-primary.card-outline,
+    .alert-primary,
+    .border-primary {
+        background-color: #8000ff !important;
+        border-color: #8000ff !important;
+    }
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        color: #8000ff;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
