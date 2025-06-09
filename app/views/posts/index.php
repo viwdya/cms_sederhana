@@ -14,7 +14,7 @@
         <div class="card card-body mb-3">
             <h4 class="card-title"><?php echo $post->title; ?></h4>
             <div class="bg-light p-2 mb-3">
-                Written by User on <?php echo $post->created_at; ?>
+                Posted on <?php echo $post->created_at; ?>
             </div>
             <p class="card-text"><?php echo substr($post->content, 0, 200) . '...'; ?></p>
             <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->id; ?>" class="btn btn-dark">Read More</a>

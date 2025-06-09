@@ -5,15 +5,15 @@ class User {
         $this->db = new Database;
     }
     public function register($data) {
-        $this->db->query('INSERT INTO users (name, email, password) VALUES (:name, :email, :password)');
-        $this->db->bind(':name', $data['name']);
-        $this->db->bind(':email', $data['email']);
+        $this->db->query('INSERT INTO admin (username, password, photo) VALUES (:username, :password, :photo)');
+        $this->db->bind(':username', $data['username']);
         $this->db->bind(':password', $data['password']);
+        $this->db->bind(':photo', $data['photo']);
         return $this->db->execute();
     }
-    public function login($email, $password) {
-        $this->db->query('SELECT * FROM users WHERE email = :email');
-        $this->db->bind(':email', $email);
+    public function login($username, $password) {
+        $this->db->query('SELECT * FROM admin WHERE username = :username');
+        $this->db->bind(':username', $username);
         $row = $this->db->single();
         if($row && password_verify($password, $row->password)) {
             return $row;
@@ -21,14 +21,14 @@ class User {
             return false;
         }
     }
-    public function findUserByEmail($email) {
-        $this->db->query('SELECT * FROM users WHERE email = :email');
-        $this->db->bind(':email', $email);
+    public function findUserByUsername($username) {
+        $this->db->query('SELECT * FROM admin WHERE username = :username');
+        $this->db->bind(':username', $username);
         $row = $this->db->single();
         return $row ? true : false;
     }
     public function getUserById($id) {
-        $this->db->query('SELECT * FROM users WHERE id = :id');
+        $this->db->query('SELECT * FROM admin WHERE id = :id');
         $this->db->bind(':id', $id);
         return $this->db->single();
     }

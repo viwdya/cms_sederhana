@@ -12,19 +12,14 @@ class Post {
     }
 
     public function addPost($data) {
-        $this->db->query('INSERT INTO posts (title, content, user_id) VALUES (:title, :content, :user_id)');
+        $this->db->query('INSERT INTO posts (title, content) VALUES (:title, :content)');
         
         // Bind values
         $this->db->bind(':title', $data['title']);
         $this->db->bind(':content', $data['content']);
-        $this->db->bind(':user_id', $data['user_id']);
 
         // Execute
-        if($this->db->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+        return $this->db->execute();
     }
 
     public function updatePost($data) {

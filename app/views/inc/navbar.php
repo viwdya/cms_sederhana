@@ -18,7 +18,7 @@
                 <?php if(isset($_SESSION['user_id'])): ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php echo $_SESSION['user_name']; ?>
+                            <?php echo isset($_SESSION['user_username']) ? $_SESSION['user_username'] : 'User'; ?>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="<?php echo URLROOT; ?>/users/logout">Logout</a>

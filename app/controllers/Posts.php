@@ -20,13 +20,10 @@ class Posts extends Controller {
             redirect('users/login');
         }
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
-            // Sanitize POST array
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-
             $data = [
                 'title' => trim($_POST['title']),
                 'content' => trim($_POST['content']),
-                'user_id' => 1, // Temporary user ID
                 'title_err' => '',
                 'content_err' => ''
             ];
@@ -133,5 +130,13 @@ class Posts extends Controller {
         } else {
             redirect('posts');
         }
+    }
+
+    public function show($id) {
+        $post = $this->postModel->getPostById($id);
+        $data = [
+            'post' => $post
+        ];
+        $this->view('posts/show', $data);
     }
 } 
