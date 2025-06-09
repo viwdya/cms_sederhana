@@ -16,6 +16,9 @@ class Posts extends Controller {
     }
 
     public function add() {
+        if(!isset($_SESSION['user_id'])) {
+            redirect('users/login');
+        }
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Sanitize POST array
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -63,6 +66,9 @@ class Posts extends Controller {
     }
 
     public function edit($id) {
+        if(!isset($_SESSION['user_id'])) {
+            redirect('users/login');
+        }
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Sanitize POST array
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -114,6 +120,9 @@ class Posts extends Controller {
     }
 
     public function delete($id) {
+        if(!isset($_SESSION['user_id'])) {
+            redirect('users/login');
+        }
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
             if($this->postModel->deletePost($id)) {
                 flash('post_message', 'Post Removed');
