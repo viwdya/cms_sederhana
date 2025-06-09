@@ -1,6 +1,6 @@
 <?php
 // URL Root
-define('URLROOT', 'http://localhost/cms_sederhana');
+// define('URLROOT', 'http://localhost/cms_sederhana');
 
 // Redirect function
 function redirect($page) {

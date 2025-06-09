@@ -1,0 +1,59 @@
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    min-height: 100vh;
+}
+
+.navbar {
+    border-radius: 0 0 10px 10px;
+}
+
+.card {
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.btn-primary, .btn-success, .btn-dark {
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: #2563eb;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.jumbotron {
+    background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+#msg-flash {
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.invalid-feedback {
+    display: block;
+} 
