@@ -9,4 +9,5 @@ define('DB_NAME', 'cms_sederhana');
 define('URLROOT', 'http://localhost/cms_sederhana');
 
 // Site Name
-define('SITENAME', 'CMS Sederhana'); 
+define('SITENAME', 'CMS Sederhana');
+define('APPROOT', dirname(dirname(__FILE__))); 
